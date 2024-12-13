@@ -2,8 +2,8 @@
 # Beskrivelse
 Dette repository indeholder to tests af WordPress REST API integration for JumboTransport:
 
-# Basal test - Henter og viser kun titler
-# Udvidet test - Komplet visning af posts inklusiv billeder, forfattere og metadata
+Basal test - Henter og viser kun titler
+Udvidet test - Komplet visning af posts inklusiv billeder, forfattere og metadata
 
 # Test 1: Basal API Integration
 Den første test implementerer:
