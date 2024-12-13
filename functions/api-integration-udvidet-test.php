@@ -1,4 +1,19 @@
 <?php
+
+/**
+ * JumboTransport REST API Test 2 (Udvidet)
+ * Udvidet test af WordPress REST API integration.
+ * Denne version henter og viser detaljeret information om posts,
+ * inklusiv billeder, forfatterinformation og metadata.
+ */
+
+/**
+ * Henter udvidet data fra WordPress REST API
+ * Inkluderer _embed parameter for at hente relateret data som
+ * featured images og forfatterinformation.
+ */
+
+
 function hent_data_fra_api() {
   $url = 'https://www.lundhjemmesider-udvikling.dk/jumbotransport_dk/wp-json/wp/v2/posts?order=desc&orderby=date&_embed';
   $args = $args = array(
@@ -21,6 +36,18 @@ function hent_data_fra_api() {
 
     return json_decode($data);
 }
+
+/**
+ * Viser udvidet postinformation via shortcode [vis_news_dk_data]
+ * Viser følgende for hver post:
+ * - Titel
+ * - Dato
+ * - Indhold
+ * - Uddrag
+ * - Forfatterinformation
+ * - Status
+ * - Featured image (hvis tilgængeligt)
+ */
 
 function vis_data() {
   $data = hent_data_fra_api();
