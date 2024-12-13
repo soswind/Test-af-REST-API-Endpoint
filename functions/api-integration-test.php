@@ -1,5 +1,16 @@
 <?php
 
+/**
+ * REST API Test 1
+ * Første test af WordPress REST API integration.
+ * Simpel implementation der henter og viser titler fra alle posts.
+ */
+
+/**
+ * Henter data fra WordPress REST API
+ * Basal test af API-forbindelse og datahentning
+ */
+
 function hent_data_fra_api() {
   $url = 'https://www.lundhjemmesider-udvikling.dk/jumbotransport_dk/wp-json/wp/v2/posts';
   $args = array(
@@ -20,6 +31,12 @@ function hent_data_fra_api() {
   }
   return json_decode($data);
 }
+
+/**
+ * Viser titler fra hentede posts via shortcode [vis_news_dk_data]
+ * Simpel visning af post-titler i en usorteret liste
+ */
+
 function vis_data() {
   $data = hent_data_fra_api();
 
