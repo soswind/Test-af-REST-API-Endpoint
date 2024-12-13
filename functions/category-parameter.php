@@ -1,6 +1,6 @@
 <?php
 
-/** Visning af category parameter */
+/** Visning af category parameter, der henter fra en specifik kategori */
 
 function hent_data_fra_api() {
   $category_id = 13;
